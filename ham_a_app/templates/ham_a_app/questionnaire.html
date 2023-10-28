@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamilton Anxiety Rating Scale</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'ham_a_app/styles.css' %}">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Hamilton Anxiety Rating Scale (HAM-A) Questionnaire</h1>
+        <form method="post">
+            {% csrf_token %}
+            <p>Please answer the following questions on a scale of 0 to 4.</p>
+            {% for question, weight in questions %}
+                <label for="{{ question }}">{{ question }} (0-4):</label>
+                <input class="form-control" type="number" name="{{ question }}" min="0" max="4" required>
+            {% endfor %}
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

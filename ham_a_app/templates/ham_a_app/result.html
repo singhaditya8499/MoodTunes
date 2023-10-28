@@ -1,0 +1,19 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamilton Anxiety Rating Scale</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'ham_a_app/styles.css' %}">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Hamilton Anxiety Rating Scale (HAM-A) Result</h1>
+        <p>Your total anxiety score as a percentage of 56:</p>
+        <p>{{ percentage_score }}%</p>
+        <p>Interpretation: {{ interpretation }}</p>
+    </div>
+</body>
+</html>
