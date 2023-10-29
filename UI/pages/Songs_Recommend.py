@@ -73,7 +73,7 @@ def getDataFrameSev(df, x):
 def recommendSongs():
     global clicked  # Use the global keyword to modify the 'clicked' variable
     clicked = True
-    df = pd.read_pickle("./data/taylor_swift_data_regression_result.pkl")
+    df = pd.read_pickle("./../data/taylor_swift_data_regression_result.pkl")
     anxiety_level = st.session_state["sum_of_sliders"]
     percentage_anxiety_level = (anxiety_level)/56.0
     if percentage_anxiety_level <= 0.30:
