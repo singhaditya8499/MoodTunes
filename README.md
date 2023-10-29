@@ -11,7 +11,7 @@ MoodTunes was crafted using Django for the backend, LSTM and NLP for anxiety pre
 
 Belo is the flow diagram of our work.
 
-![image](./data/moodtunes1.png)
+<img src="data/moodtunes1.png">
 
 ### Repository structure
 
