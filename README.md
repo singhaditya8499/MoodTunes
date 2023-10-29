@@ -9,6 +9,17 @@ MoodTunes is an app designed to help individuals manage their anxiety levels thr
 ## How we built it
 MoodTunes was crafted using Django for the backend, LSTM and NLP for anxiety prediction, Streamlit for the user interface, and Python for seamless integration. We also utilized web automation and data scraping techniques to curate an extensive music library. This combination of technologies enabled us to offer accurate anxiety assessments and personalized music recommendations via a user-friendly app.
 
+Belo is the flow diagram of our work.
+
+![image](./data/moodtunes1.png)
+
+### Repository structure
+
+1. `data` folder contains all the dataset that was gathered from websites.
+2. `ham_a_app` and `ham_a_project` is the django component for python backend.
+3. `src` folder contains code for data preprocessing, classification.
+4. `UI` has the code for all the streamlit components.
+
 ## Challenges we ran into
 Developing algorithms that accurately assessed anxiety levels and recommended suitable music was an ongoing challenge. Additionally, we faced difficulties related to training the transformer model, which impacted our ability to achieve the desired level of accuracy in assessing anxiety levels and making music recommendations. Overcoming these challenges required innovative solutions and continuous efforts to refine the app.
 
