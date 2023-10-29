@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from pathlib import Path
 
 st.title("MoodTunes")
 st.markdown("### Songs Recommendation")
@@ -73,7 +74,8 @@ def getDataFrameSev(df, x):
 def recommendSongs():
     global clicked  # Use the global keyword to modify the 'clicked' variable
     clicked = True
-    df = pd.read_pickle("./../data/taylor_swift_data_regression_result.pkl")
+    file_path = Path(__file__).parents[1] / 'data/taylor_swift_data_regression_result.pkl'
+    df = pd.read_pickle(file_path)
     anxiety_level = st.session_state["sum_of_sliders"]
     percentage_anxiety_level = (anxiety_level)/56.0
     if percentage_anxiety_level <= 0.30:
